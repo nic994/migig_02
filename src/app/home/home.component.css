@@ -89,26 +89,132 @@ a.button1:hover {
 /* carousel */
 
 /* end carousel */
-a.btn-black:hover {
-  background-color: #ed2939;
+/* a.bg-black1:hover {
+  background-color: #fe0003;
 }
 a.btn-red:hover {
   background-color: #1b1b1b;
-  /* border-radius: 5px; */
-}
-.about-wrapper {
+ } */
+
+/* card */
+/* .card {
+ 
+  height: 1;
+  border-radius: 20px;
   position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
+  padding: 1.8rem;
+   transition: 0.5s ease-out;
+  overflow: visible;
+} */
+
+/*Hover*/
+/* .card:hover {
+  border-color: #fe0003;
+  box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+} */
+
+/* end card */
+
+/* card button */
+.btnDetails {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  background: transparent;
+  padding: 0;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+.btnDetails.learn-more {
+  width: 12rem;
+  height: auto;
+}
+
+.btnDetails.learn-more .circle {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: relative;
+  display: block;
+  margin: 0;
+  width: 3rem;
+  height: 3rem;
+  background: #1b1b1b;
+  border-radius: 1.625rem;
+}
+
+.btnDetails.learn-more .circle .icon {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: #fff;
+}
+
+.btnDetails.learn-more .circle .icon.arrow {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  left: 0.625rem;
+  width: 1.125rem;
+  height: 0.125rem;
+  background: none;
+}
+
+.btnDetails.learn-more .circle .icon.arrow::before {
+  position: absolute;
+  content: "";
+  top: -0.29rem;
+  right: 0.0625rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-top: 0.125rem solid #fff;
+  border-right: 0.125rem solid #fff;
+  transform: rotate(45deg);
+}
+
+.btnDetails.learn-more .button-text {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.75rem 0;
+  margin: 0 0 0 1.85rem;
+  color: #1b1b1b;
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.btnDetails:hover .circle {
+  width: 100%;
+}
+
+.btnDetails:hover .circle .icon.arrow {
+  background: #fff;
+  transform: translate(1rem, 0);
+}
+
+.btnDetails:hover .button-text {
+  color: #ffff;
+}
+
+/* end card button */
+
+.wrapper {
+  position: relative;
   display: flex;
-  min-height: 500px;
   -webkit-box-pack: end;
   -webkit-justify-content: flex-end;
   -ms-flex-pack: end;
   justify-content: flex-end;
 }
-.about-left {
+.img-left {
   position: absolute;
   left: 0%;
   top: 6%;
@@ -122,10 +228,7 @@ a.btn-red:hover {
   background-position: 69% 80%;
   background-size: cover;
 }
-.about-right {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
+.img-right {
   display: flex;
   width: 80%;
   padding: 45px;
@@ -137,13 +240,11 @@ a.btn-red:hover {
   background-color: #222;
   color: #f9f9f9;
 }
-.about-content-wrapper {
+.img-right-wrapper {
   width: 80%;
-  /* padding-right: 145px;
-  padding-left: 145px; */
 }
 .container {
-  max-width: 1200px;
+  /* max-width: 1200px; */
   margin-right: auto;
   margin-left: auto;
   padding-right: 15px;
@@ -156,26 +257,26 @@ a.btn-red:hover {
   }
 }
 @media screen and (max-width: 991px) {
-  .about-left {
+  .img-left {
     top: 8%;
   }
 }
 @media screen and (max-width: 767px) {
-  .about-wrapper {
+  .wrapper {
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
 }
 @media screen and (max-width: 767px) {
-  .about-left {
+  .img-left {
     position: static;
     width: 100%;
     border-radius: 0px;
   }
 }
 @media screen and (max-width: 767px) {
-  .about-right {
+  .img-right {
     width: 100%;
     -webkit-box-pack: center;
     -webkit-justify-content: center;
@@ -185,4 +286,9 @@ a.btn-red:hover {
     padding-left: 0;
     padding-right: 0;
   }
+}
+
+/* about us */
+.myColor {
+  background-color: #1b1b1b;
 }
