@@ -2,11 +2,15 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
+import { ProductsComponent } from './products/products.component';
+import { ProductDetailsComponent } from './product-details/product-details.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
-  // { path: 'contactus', component: ContactusComponent },
+  { path: 'products', component: ProductsComponent },
+  { path: 'product-details', component: ProductDetailsComponent },
+
   // { path: 'products/gundam', component: GundamComponent },
   // { path: 'products/action-figure', component: ActionFigureComponent },
   // {
