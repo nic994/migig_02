@@ -116,7 +116,7 @@ a.bg-black1:hover {
 /* end card */
 
 /* card button */
-/* .btnDetails {
+.btnDetails {
   position: relative;
   display: inline-block;
   cursor: pointer;
@@ -199,10 +199,14 @@ a.bg-black1:hover {
   background: #fff;
   transform: translate(1rem, 0);
 }
-
+.btnDetails:hover .button-text {
+  color: #fff;
+}
+/*
 .btnDetails:hover .button-text {
   color: #ffff;
-} */
+}
+*/
 
 /* end card button */
 /* product cards */
@@ -221,7 +225,7 @@ a.bg-black1:hover {
 
   /* background: rgba(217, 217, 217, 0.58); */
   border: 2px solid white;
-  box-shadow: 12px 17px 41px rgba(0, 0, 0, 0.22);
+  /* box-shadow: 12px 17px 41px rgba(0, 0, 0, 0.22); */
   backdrop-filter: blur(6px);
   border-radius: 17px;
   text-align: center;
@@ -240,10 +244,10 @@ a.bg-black1:hover {
   /* border: 2px solid; */
   /* filter: drop-shadow(-5px -5px 5px black); */
 }
-.card:hover {
+/* .card:hover {
   border: 1px solid black;
   transform: scale(1.05);
-}
+} */
 .card:active {
   transform: scale(0.95) rotateZ(1.7deg);
 }
@@ -264,13 +268,201 @@ a.bg-black1:hover {
 
 @media screen and (max-width: 768px) {
   .card {
-    width: 30%;
+    width: 40%;
   }
 }
 
 @media screen and (max-width: 480px) {
   .card {
     width: 40%;
+  }
+  .btnDetails {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    background: transparent;
+    padding: 0;
+    font-size: inherit;
+    font-family: inherit;
+  }
+
+  .btnDetails.learn-more {
+    width: 12rem;
+    height: auto;
+  }
+
+  .btnDetails.learn-more .circle {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: relative;
+    display: block;
+    /* margin: 0; */
+    width: 2rem;
+    height: 2rem;
+    margin-left: 25px;
+    margin-top: 9px;
+    background: #1b1b1b;
+    border-radius: 1.625rem;
+  }
+
+  .btnDetails.learn-more .circle .icon {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    /* margin: auto; */
+    margin-left: -8px;
+    background: #fff;
+  }
+
+  .btnDetails.learn-more .circle .icon.arrow {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    left: 0.625rem;
+    width: 1.125rem;
+    height: 0.125rem;
+    background: none;
+  }
+
+  .btnDetails.learn-more .circle .icon.arrow::before {
+    position: absolute;
+    content: "";
+    top: -0.29rem;
+    right: 0.0625rem;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-top: 0.125rem solid #fff;
+    border-right: 0.125rem solid #fff;
+    transform: rotate(45deg);
+  }
+
+  .btnDetails.learn-more .button-text {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0.75rem 0;
+    margin: 0 0 0 1.85rem;
+    color: #1b1b1b;
+    font-weight: 700;
+    line-height: 1.6;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .btnDetails:hover .circle {
+    width: 74%;
+  }
+
+  .btnDetails:hover .circle .icon.arrow {
+    background: #fff;
+    transform: translate(1rem, 0);
+  }
+  .btnDetails:hover .button-text {
+    color: #fff;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .card {
+    width: 43%;
+  }
+  .btnDetails {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    background: transparent;
+    padding: 0;
+    font-size: inherit;
+    font-family: inherit;
+  }
+
+  .btnDetails.learn-more {
+    width: 12rem;
+    height: auto;
+    margin-top: -20px;
+    margin-left: -40px;
+  }
+
+  .btnDetails.learn-more .circle {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: relative;
+    /* display: none; */
+    /* margin: 0; */
+    width: 2rem;
+    height: 5rem;
+    margin-left: 30px;
+    margin-top: 19px;
+    border-radius: 1.625rem;
+    display: none;
+  }
+
+  .btnDetails.learn-more .circle .icon {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    /* margin: auto; */
+    margin-left: -8px;
+    background: #fff;
+    display: none;
+  }
+
+  .btnDetails.learn-more .circle .icon.arrow {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    left: 0.625rem;
+    width: 1.125rem;
+    height: 0.125rem;
+    display: none;
+  }
+
+  .btnDetails.learn-more .circle .icon.arrow::before {
+    position: absolute;
+    content: "";
+    top: -0.29rem;
+    right: 0.0625rem;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-top: 0.125rem solid #fff;
+    border-right: 0.125rem solid #fff;
+    transform: rotate(45deg);
+    display: none;
+  }
+
+  .btnDetails.learn-more .button-text {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 10px;
+    padding: 0.75rem 0;
+    margin: 0 0 0 1.85rem;
+    color: #060606;
+    font-weight: 700;
+    line-height: 1.6;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .btnDetails:hover .circle {
+    width: 71%;
+  }
+
+  .btnDetails:hover .circle .icon.arrow {
+    background: #fff;
+    transform: translate(1rem, 0);
+  }
+  .btnDetails:hover .button-text {
+    color: #fff;
   }
 }
 /* end card */
