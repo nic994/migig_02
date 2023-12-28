@@ -10,6 +10,7 @@ import { FooterComponent } from './common/footer/footer.component';
 import { ProductsComponent } from './products/products.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductDetailsComponent } from './product-details/product-details.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
     FooterComponent,
     ProductsComponent,
     ProductDetailsComponent,
+    AboutComponent,
   ],
   imports: [BrowserModule, RouterModule, AppRoutingModule, HttpClientModule],
   providers: [],

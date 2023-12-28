@@ -1,5 +1,5 @@
-/* .bg-image {
-   background-size: auto;
+.bg-image {
+  background-size: auto;
   background-repeat: no-repeat;
   height: 85vh;
   width: 200vw;
@@ -29,7 +29,7 @@ a.button1:hover {
     display: block;
     margin: 0.4em auto;
   }
-} */
+}
 /* end banner */
 
 .c-item {

@@ -1,0 +1,14 @@
+<div class="margin-top">
+  <!-- image-customizer.component.html -->
+  <div>
+    <img [src]="imageUrl" alt="Customizable Image" (load)="onImageLoad()" />
+    <canvas
+      #canvas
+      (mousedown)="startPainting($event)"
+      (mousemove)="paint($event)"
+      (mouseup)="stopPainting()"
+    ></canvas>
+    <input type="color" #colorPicker />
+    <button (click)="fillCanvas()">Fill with Selected Color</button>
+  </div>
+</div>
