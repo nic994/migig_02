@@ -1,0 +1,16 @@
+ul li {
+  list-style-type: none;
+}
+a.title {
+  text-decoration: none;
+}
+.text-dark {
+  width: 150px;
+}
+.card-header {
+  background-color: rgba(255, 255, 255, 0);
+  border-bottom: none;
+}
+.text-reset {
+  text-decoration: none;
+}

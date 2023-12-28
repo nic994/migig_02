@@ -5,6 +5,9 @@ import { HomeComponent } from './home/home.component';
 import { ProductsComponent } from './products/products.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { AboutComponent } from './about/about.component';
+import { ProductGuitarComponent } from './product-guitar/product-guitar.component';
+import { ProductKeyboardComponent } from './product-keyboard/product-keyboard.component';
+import { ProductPercussionComponent } from './product-percussion/product-percussion.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -12,6 +15,9 @@ const routes: Routes = [
   { path: 'aboutus', component: AboutComponent },
   { path: 'products', component: ProductsComponent },
   { path: 'product-details', component: ProductDetailsComponent },
+  { path: 'product/guitar', component: ProductGuitarComponent },
+  { path: 'product/keyboard', component: ProductKeyboardComponent },
+  { path: 'product/percussion', component: ProductPercussionComponent },
 ];
 @NgModule({
   declarations: [],

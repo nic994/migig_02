@@ -1,0 +1,68 @@
+import { ProductsModel } from './product.model';
+
+export const myProducts: ProductsModel[] = [
+  {
+    name: 'Cymbals Model 6"/6"',
+    category: 'Cymbals',
+    price: 515,
+    description: '',
+    imageUrl: '../../assets/image/cymbals/c-black.jpg',
+    slider2: '../../assets/image/cymbals/c-black2.jpg',
+    slider3: '../../assets/image/cymbals/c-black3.jpg',
+  },
+  {
+    name: 'Cymbals Model 10"/12" ',
+    category: 'Cymbals',
+    price: 515,
+    description: '',
+    imageUrl: '../../assets/image/cymbals/c-brown.jpg',
+    slider2: '../../assets/image/cymbals/cbrown2.jpg',
+    slider3: '../../assets/image/cymbals/cbrown3.jpg',
+  },
+  {
+    name: 'Cymbals Model 12"/16" ',
+    category: 'Cymbals',
+    price: 515,
+    description: '',
+    imageUrl: '../../assets/image/cymbals/c-customize.jpg',
+    slider2: '../../assets/image/cymbals/c-customize2.jpg',
+    slider3: '../../assets/image/cymbals/c-customize3.jpg',
+  },
+  {
+    name: 'Cymbals Model 18"/16" ',
+    category: 'Cymbals',
+    price: 515,
+    description: '',
+    imageUrl: '../../assets/image/cymbals/c-red.jpg',
+    slider2: '../../assets/image/cymbals/c-red2.jpg',
+    slider3: '../../assets/image/cymbals/c-red3.jpg',
+  },
+  {
+    name: 'Piccolo Snare',
+    category: 'Snare',
+    price: 515,
+    description: '',
+    imageUrl: '../../assets/image/snare/snare1.jpg',
+    slider2: '../../assets/image/snare/snare1.jpg',
+    slider3: ' ',
+  },
+
+  {
+    name: 'Marching Snare',
+    category: 'Snare',
+    price: 515,
+    description: '',
+    imageUrl: '../../assets/image/snare/s-army.jpg',
+    slider2: '../../assets/image/snare/s-army2.jpg',
+    slider3: '../../assets/image/snare/s-army3.jpg',
+  },
+  {
+    name: 'Customize Drum Hardware Bag',
+    category: 'Drum Hardware',
+    price: 515,
+    description: '',
+    imageUrl: '../../assets/image/products/drumHardware1.jpg',
+    slider2: '../../assets/image/snare/s-army2.jpg',
+    slider3: '../../assets/image/snare/s-army3.jpg',
+  },
+];

@@ -2,8 +2,8 @@ import { ProductsModel } from './product.model';
 
 export const myProducts: ProductsModel[] = [
   {
-    name: 'Guitar',
-    category: 'Guitar',
+    name: 'Classical Guitar Model 001',
+    category: 'Classical Guitar',
     price: 515,
     description: '',
     imageUrl: '../../assets/image/guitar/g-black.jpg',
@@ -11,8 +11,8 @@ export const myProducts: ProductsModel[] = [
     slider3: '../../assets/image/guitar/gblack2.jpg',
   },
   {
-    name: 'Guitar',
-    category: 'Guitar',
+    name: 'Electic Guitar Model 002',
+    category: 'Electric Guitar',
     price: 515,
     description: '',
     imageUrl: '../../assets/image/guitar/g-red.jpg',
@@ -20,8 +20,8 @@ export const myProducts: ProductsModel[] = [
     slider3: '../../assets/image/guitar/gred3.jpg',
   },
   {
-    name: 'Guitar',
-    category: 'Guitar',
+    name: 'Bass Guitar Model 003',
+    category: 'Bass Guitar',
     price: 515,
     description: '',
     imageUrl: '../../assets/image/guitar/g-violet.jpg',

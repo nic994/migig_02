@@ -1,0 +1,139 @@
+<div class="maring-top">
+  <section class="py-5"></section>
+
+  <section class="padding-y">
+    <div class="container">
+      <div class="row">
+        <aside class="col-lg-3">
+          <button
+            class="btn btn-outline-secondary mb-3 w-100 d-lg-none"
+            data-bs-toggle="collapse"
+            data-bs-target="#aside_filter"
+          >
+            Show filter
+          </button>
+
+          <div id="aside_filter" class="collapse card d-lg-block mb-5 border-0">
+            <article class="filter-group">
+              <header class="card-header">
+                <a
+                  href="#"
+                  class="title text-dark"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapse_aside1"
+                >
+                  <div class="d-flex align-items-center">
+                    <h5 class="m-0 text-dark">Related Items</h5>
+                    <i class="bi bi-chevron-down ms-auto"></i>
+                  </div>
+                </a>
+              </header>
+              <div class="collapse show" id="collapse_aside1">
+                <div class="card-body">
+                  <ul class="list-menu p-0">
+                    <li class="my-1" *ngFor="let category of categories">
+                      <a
+                        href="javascript:void(0)"
+                        class="btn btn-black text-dark font-Regular font-semibold text-start"
+                        [class.active]="category === selectedCategory"
+                        (click)="onCategorySelected(category)"
+                      >
+                        {{ category }}
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+
+            <!-- <article class="filter-group">
+              <header class="card-header">
+                <a
+                  href="#"
+                  class="title text-dark"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapse_aside2"
+                >
+                  <div class="d-flex align-items-center">
+                    <h5 class="m-0">Price</h5>
+                    <i class="bi bi-chevron-down ms-auto"></i>
+                  </div>
+                </a>
+              </header>
+              <div class="collapse show" id="collapse_aside2">
+                <div class="card-body">
+                  <input type="range" class="form-range" min="0" max="100" />
+                  <div class="row mb-3">
+                    <div class="col-6">
+                      <label for="min" class="form-label">Min</label>
+                      <input
+                        class="form-control"
+                        id="min"
+                        placeholder="$0"
+                        type="number"
+                      />
+                    </div>
+
+                    <div class="col-6">
+                      <label for="max" class="form-label">Max</label>
+                      <input
+                        class="form-control"
+                        id="max"
+                        placeholder="$1,0000"
+                        type="number"
+                      />
+                    </div>
+                  </div>
+                  <button class="btn btn-light w-100" type="button">
+                    Apply
+                  </button>
+                </div>
+              </div>
+            </article> -->
+          </div>
+        </aside>
+        <main class="col-lg-9">
+          <div class="row">
+            <!-- <div class="col-lg-4 col-md-6 col-sm-6" *ngFor="let product of paginatedProducts" > -->
+
+            <a
+              *ngFor="let product of paginatedProducts"
+              class="col-lg-4 col-md-6 col-sm-6 py-2 text-reset"
+              [routerLink]="['/product-details']"
+              [state]="{ product: product }"
+            >
+              <div class="card card-product-grid h-100 text-center border-0">
+                <img
+                  [src]="product.imageUrl"
+                  alt="{{ product.name }} Image"
+                  decoding="async"
+                  class="card-img-top w-100 rounded"
+                  loading="lazy"
+                />
+                <div class="card-body">
+                  <h5 class="card-title fs-5">{{ product.name }}</h5>
+                  <h5 class="price fs-6 font-semibold">{{ product.price }}</h5>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- </div> -->
+          <nav aria-label="Page navigation example text-center">
+            <ul class="pagination">
+              <li class="page-item" *ngFor="let page of getPages()">
+                <a
+                  class="page-link"
+                  href="javascript:void(0)"
+                  (click)="onPageChange(page, $event)"
+                >
+                  {{ page }}
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </main>
+      </div>
+    </div>
+  </section>
+</div>
