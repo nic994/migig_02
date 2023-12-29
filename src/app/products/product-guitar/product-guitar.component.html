@@ -5,22 +5,23 @@
     <div class="container">
       <div class="row">
         <aside class="col-lg-3">
-          <button
+          <!-- <button
             class="btn btn-outline-secondary mb-3 w-100 d-lg-none"
             data-bs-toggle="collapse"
             data-bs-target="#aside_filter"
           >
             Show filter
-          </button>
+          </button>id="aside_filter" -->
 
-          <div id="aside_filter" class="collapse card d-lg-block mb-5 border-0">
+          <div class="card d-lg-block mb-5 border-0">
             <article class="filter-group">
               <header class="card-header">
                 <a
                   href="#"
-                  class="title text-dark"
+                  class="title text-dark collapsed"
                   data-bs-toggle="collapse"
                   data-bs-target="#collapse_aside1"
+                  aria-expanded="false"
                 >
                   <div class="d-flex align-items-center">
                     <h5 class="m-0 text-dark">Related Items</h5>
@@ -96,34 +97,38 @@
           <div class="row">
             <!-- <div class="col-lg-4 col-md-6 col-sm-6" *ngFor="let product of paginatedProducts" > -->
 
-            <a
-              *ngFor="let product of paginatedProducts"
-              class="col-lg-4 col-md-6 col-sm-6 py-2 text-reset"
-              [routerLink]="['/product-details']"
-              [state]="{ product: product }"
-            >
-              <div class="card card-product-grid h-100 text-center border-0">
-                <img
-                  [src]="product.imageUrl"
-                  alt="{{ product.name }} Image"
-                  class="card-img-top w-100 rounded"
-                  decoding="async"
-                  loading="lazy"
-                />
-                <div class="card-body border-0">
-                  <h5 class="card-title fs-5">{{ product.name }}</h5>
-                  <h5 class="price fs-6 font-semibold">{{ product.price }}</h5>
+            <div class="row m-0">
+              <a
+                *ngFor="let product of paginatedProducts"
+                class="col-lg-3 col-md-6 col-sm-6 col-6 text-reset"
+                [routerLink]="['/product-details']"
+                [state]="{ product: product }"
+              >
+                <div class="card text-center border-0">
+                  <img
+                    [src]="product.imageUrl"
+                    alt="{{ product.name }} Image"
+                    decoding="async"
+                    class="card-img-top rounded"
+                    loading="lazy"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title fs-6">{{ product.name }}</h5>
+                    <!-- <h5 class="price fs-6 font-semibold">
+                      {{ product.price }}
+                    </h5> -->
+                  </div>
                 </div>
-              </div>
-            </a>
+              </a>
+            </div>
           </div>
 
           <!-- </div> -->
           <nav aria-label="Page navigation example text-center">
-            <ul class="pagination">
+            <ul class="pagination d-flex justify-content-center">
               <li class="page-item" *ngFor="let page of getPages()">
                 <a
-                  class="page-link"
+                  class="page-link text-center"
                   href="javascript:void(0)"
                   (click)="onPageChange(page, $event)"
                 >

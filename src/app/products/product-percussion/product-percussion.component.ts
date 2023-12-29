@@ -1,28 +1,28 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { ProductsPercussionService } from '../../services/product-percussion.service';
 import { Router } from '@angular/router';
-import { ProductsModel } from '../common/models/product.model';
-import { ProductsKeyboardService } from '../services/product-keyboard.service';
+import { ProductsModel } from '../../models/product.model';
 
 @Component({
-  selector: 'app-product-keyboard',
-  templateUrl: './product-keyboard.component.html',
-  styleUrls: ['./product-keyboard.component.css'],
+  selector: 'app-product-percussion',
+  templateUrl: './product-percussion.component.html',
+  styleUrls: ['./product-percussion.component.css'],
 })
-export class ProductKeyboardComponent implements OnInit {
+export class ProductPercussionComponent {
   categories: string[] = [
-    'All Keyboard',
-    'MIDI Controllers',
-    'Digital Pianos',
-    'Synthesizers',
+    'All Percussion',
+    'Cymbals',
+    'Snare',
+    'Drum Hardware',
   ];
   allProducts: ProductsModel[] = [];
   filteredProducts: ProductsModel[] = [];
-  selectedCategory: string = 'All Keyboard';
+  selectedCategory: string = 'All Percussion';
   currentPage: number = 1;
   itemsPerPage: number = 6;
 
   constructor(
-    private productService: ProductsKeyboardService,
+    private productService: ProductsPercussionService,
     private router: Router
   ) {}
   ngOnInit(): void {
@@ -33,7 +33,7 @@ export class ProductKeyboardComponent implements OnInit {
   }
 
   filterProducts(): void {
-    if (this.selectedCategory === 'All Keyboard') {
+    if (this.selectedCategory === 'All Percussion') {
       this.filteredProducts = this.allProducts;
     } else {
       this.filteredProducts = this.allProducts.filter(

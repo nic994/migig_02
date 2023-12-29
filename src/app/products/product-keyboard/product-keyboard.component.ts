@@ -1,30 +1,28 @@
 import { Component, OnInit } from '@angular/core';
-import { ProductsModel } from '../common/models/product.model';
-import { ProductsService } from '../services/products.service';
 import { Router } from '@angular/router';
+import { ProductsModel } from '../../models/product.model';
+import { ProductsKeyboardService } from '../../services/product-keyboard.service';
 
 @Component({
-  selector: 'app-product-guitar',
-  templateUrl: './product-guitar.component.html',
-  styleUrls: ['./product-guitar.component.css'],
+  selector: 'app-product-keyboard',
+  templateUrl: './product-keyboard.component.html',
+  styleUrls: ['./product-keyboard.component.css'],
 })
-export class ProductGuitarComponent implements OnInit {
+export class ProductKeyboardComponent implements OnInit {
   categories: string[] = [
-    'All Guitar',
-    'Classical Guitar',
-    'Acoustic Guitar',
-    'Electric Guitar',
-    'Bass Guitar',
-    'Ukulele',
+    'All Keyboard',
+    'MIDI Controllers',
+    'Digital Pianos',
+    'Synthesizers',
   ];
   allProducts: ProductsModel[] = [];
   filteredProducts: ProductsModel[] = [];
-  selectedCategory: string = 'All Guitar';
+  selectedCategory: string = 'All Keyboard';
   currentPage: number = 1;
   itemsPerPage: number = 6;
 
   constructor(
-    private productService: ProductsService,
+    private productService: ProductsKeyboardService,
     private router: Router
   ) {}
   ngOnInit(): void {
@@ -35,7 +33,7 @@ export class ProductGuitarComponent implements OnInit {
   }
 
   filterProducts(): void {
-    if (this.selectedCategory === 'All Guitar') {
+    if (this.selectedCategory === 'All Keyboard') {
       this.filteredProducts = this.allProducts;
     } else {
       this.filteredProducts = this.allProducts.filter(

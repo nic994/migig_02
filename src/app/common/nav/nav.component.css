@@ -1,5 +1,5 @@
 .sidebar {
-  background-color: #ed2939;
+  background-color: #1b1b1b;
   backdrop-filter: blur(10px);
 }
 .bg-color {
@@ -22,4 +22,8 @@
   -webkit-transition: all 300ms ease;
   transition: all 300ms ease;
   color: #f9f9f9;
+}
+
+.white-icon {
+  color: #fff;
 }
